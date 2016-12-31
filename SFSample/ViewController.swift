@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
     private var launchButton: UIButton?
@@ -23,6 +24,8 @@ class ViewController: UIViewController {
         
         launchButton?.addTarget(self, action: #selector(self.onClickLaunchButton(_:)), for: UIControlEvents.touchUpInside)
         self.view.addSubview((launchButton)!);
+
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +35,10 @@ class ViewController: UIViewController {
 
     
     internal func onClickLaunchButton(_ sender: AnyObject) {
-        
+        let sfvc = SFSafariViewController(url: NSURL(string: "https://google.com")! as URL)
+        sfvc.modalPresentationStyle = UIModalPresentationStyle.overFullScreen
+        sfvc.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        present(sfvc, animated: true, completion: nil);
     }
 
 }
