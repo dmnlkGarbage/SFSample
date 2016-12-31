@@ -2,7 +2,6 @@
 //  SFSampleUITests.swift
 //  SFSampleUITests
 //
-//  Created by 川口将貴 on 2016/12/31.
 //  Copyright © 2016年 dmnlk. All rights reserved.
 //
 
